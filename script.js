@@ -364,7 +364,7 @@ if (demoShell) {
 }
 
 const chatFaqs = [
-  { match: /price|cost|month|fee/i, answer: 'Our managed plans start at $1,200 per month, with onboarding from $1,500. Every engagement begins with an audit so the scope fits the business.' },
+  { match: /price|cost|month|fee/i, answer: 'Our managed plans are in the $450–$500 per month range, with onboarding from $500. Every engagement begins with an audit so the scope fits the business.' },
   { match: /cancel|leave|own|ownership|domain/i, answer: 'You own your domain and the content we create. After the minimum term, you can cancel with 30 days notice and receive a clean export plus a documented handoff.' },
   { match: /time|long|launch|week/i, answer: 'Most launches take 3–5 weeks after content and access arrive. The process is audit, plan, build, test, launch, then ongoing improvement.' },
   { match: /ai|bot|accuracy|autom/i, answer: 'AI stays bounded: it answers from approved sources, follows guardrails, logs usage, and hands unclear questions to a human.' },
@@ -422,7 +422,7 @@ chatRoot.querySelector('.chat-form')?.addEventListener('submit', (event) => {
   chatInput.value = '';
 });
 
-const formSubmitUrl = 'https://formsubmit.co/ajax/hello@siteforge.systems';
+const formSubmitUrl = 'https://formsubmit.co/ajax/siteforgerwebsites@gmail.com';
 const forms = document.querySelectorAll('.audit-form');
 
 forms.forEach((form) => {
@@ -505,7 +505,7 @@ forms.forEach((form) => {
       console.error('Form submission failed:', errorObject instanceof Error ? errorObject.message : 'Unknown error');
       if (errorBox) {
         errorBox.hidden = false;
-        errorBox.textContent = 'We could not send your request automatically. Your email app should open with the request ready to send, or email hello@siteforge.systems directly.';
+        errorBox.textContent = 'We could not send your request automatically. Your email app should open with the request ready to send, or email siteforgerwebsites@gmail.com directly.';
       }
       if (statusBox) {
         statusBox.textContent = 'We could not send your request right now.';
@@ -516,7 +516,7 @@ forms.forEach((form) => {
         .filter((field) => field.name && field.value.trim())
         .map((field) => `${field.name}: ${field.value.trim()}`)
         .join('\n'));
-      window.location.href = `mailto:hello@siteforge.systems?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:siteforgerwebsites@gmail.com?subject=${subject}&body=${body}`;
     } finally {
       submitButton.disabled = false;
       submitButton.textContent = originalText;
