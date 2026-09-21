@@ -473,6 +473,7 @@ forms.forEach((form) => {
     payload._captcha = payload._captcha || 'false';
     payload._template = payload._template || 'table';
     payload._subject = payload._subject || 'Siteforge audit request';
+    payload._replyto = payload.email || payload._replyto || '';
 
     try {
       const response = await fetch(formSubmitUrl, {
